@@ -1,4 +1,4 @@
-//nprequire('dotenv').config();
+nprequire('dotenv').config();
 /*
 CSC3916 HW2
 File: Server.js
@@ -64,13 +64,64 @@ router.post('/signin', (req, res) => {
     } else {
         if (req.body.password == user.password) {
             var userToken = { id: user.id, username: user.username };
-            var token = jwt.sign(userToken, process.env.SECRET_KEY);
+            var token = jwt.sign(userToken, process.env.UNIQUE_KEY);
+            //var token = jwt.sign(userToken, process.env.SECRET_KEY);
             res.json ({success: true, token: 'JWT ' + token});
         }
         else {
             res.status(401).send({success: false, msg: 'Authentication failed.'});
         }
     }
+});
+
+router.route('/movies')
+
+.get((req, res) => {
+
+    var o = getJSONObjectForMovieRequirement(req);
+    o.status = 200;
+    o.message = "GET movies";
+    o.query = req.query;
+    o.env = process.env.UNIQUE_KEY;
+
+    res.json(o);
+})
+
+.post((req, res) => {
+
+    var o = getJSONObjectForMovieRequirement(req);
+    o.status = 200;
+    o.message = "movie saved";
+    o.query = req.query;
+    o.env = process.env.UNIQUE_KEY;
+
+    res.json(o);
+})
+
+.put(authJwtController.isAuthenticated, (req, res) => {
+
+    var o = getJSONObjectForMovieRequirement(req);
+    o.status = 200;
+    o.message = "movie updated";
+    o.query = req.query;
+    o.env = process.env.UNIQUE_KEY;
+
+    res.json(o);
+})
+
+.delete(authController.isAuthenticated, (req, res) => {
+
+    var o = getJSONObjectForMovieRequirement(req);
+    o.status = 200;
+    o.message = "movie deleted";
+    o.query = req.query;
+    o.env = process.env.UNIQUE_KEY;
+
+    res.json(o);
+})
+
+.all((req, res) => {
+    res.status(405).send({ message: 'HTTP method not supported.' });
 });
 
 router.route('/testcollection')
@@ -96,10 +147,7 @@ router.route('/testcollection')
     );
     
 app.use('/', router);
-//app.listen(process.env.PORT || 8080);
-app.listen(process.env.PORT || 8080, '0.0.0.0', () => {
-    console.log('Server is running on port ' + (process.env.PORT || 8080));
-});
+app.listen(process.env.PORT || 8080);
 module.exports = app; // for testing only
 
 
