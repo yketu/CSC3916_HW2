@@ -1,4 +1,4 @@
-nprequire('dotenv').config();
+require('dotenv').config();
 /*
 CSC3916 HW2
 File: Server.js
