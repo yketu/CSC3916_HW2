@@ -1,4 +1,3 @@
-//nprequire('dotenv').config();
 /*
 CSC3916 HW2
 File: Server.js
@@ -96,10 +95,7 @@ router.route('/testcollection')
     );
     
 app.use('/', router);
-//app.listen(process.env.PORT || 8080);
-app.listen(process.env.PORT || 8080, '0.0.0.0', () => {
-    console.log('Server is running on port ' + (process.env.PORT || 8080));
-});
+app.listen(process.env.PORT || 8080);
 module.exports = app; // for testing only
 
 
