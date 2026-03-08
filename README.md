@@ -74,7 +74,7 @@ You may use any of the standard packages included in Node.js or any third-party 
 
 # CSC3916 Assignment 2
 
-* Tested End-Points *
+## Tested End-Points 
 
 - POST Signup User
 - POST Signin (Get JWT)
