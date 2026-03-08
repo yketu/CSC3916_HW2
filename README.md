@@ -72,4 +72,24 @@ You may use any of the standard packages included in Node.js or any third-party 
 - https://devcenter.heroku.com/articles/config-vars 
 - https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
 
+# CSC3916 Assignment 2
+
+* Tested End-Points *
+
+- POST Signup User
+- POST Signin (Get JWT)
+- GET movies
+- POST movies
+- PUT movies (AUTH)
+- DELETE movies (AUTH)
+- DELETE movies (Wrong Password)
+- PATCH  Testing
+
+
  [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/51917935-aedb7825-0dec-4ad8-8025-8e42f1910b29?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D51917935-aedb7825-0dec-4ad8-8025-8e42f1910b29%26entityType%3Dcollection%26workspaceId%3D00d9127b-6927-44ff-8915-e48dcebc641f#?env%5Bketu_hw2%5D=W3sia2V5IjoidG9rZW4iLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJhbnkiLCJzZXNzaW9uVmFsdWUiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJbUl4TmpNME5URXpPR05pTUdGak1EUTBOakJsTkRZNU56WmlPVFpsTmpabE5qTXpNemxsTTJFaUxDSjFjMlZ5Ym1GdFpTSTZJbU4xWDNWelpYSWlMQ0pwWVhRaS4uLiIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBaQ0k2SW1JeE5qTTBOVEV6T0dOaU1HRmpNRFEwTmpCbE5EWTVOelppT1RabE5qWmxOak16TXpsbE0yRWlMQ0oxYzJWeWJtRnRaU0k2SW1OMVgzVnpaWElpTENKcFlYUWlPakUzTnpJNU9UUTFORFI5LmVDUnlfeGxYWEozR0pOSHBvdDIyNVhOWWNLWFY1eEJHU3BFMHZrN1FFYlUiLCJzZXNzaW9uSW5kZXgiOjB9XQ==)
+
+
+
+API is deployed on Render: [https://csc3916-hw2-23bq.onrender.com](https://csc3916-hw2-23bq.onrender.com)
+
+
